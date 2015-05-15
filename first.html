@@ -1,0 +1,36 @@
+/* left off at page 18 */
+<html ng-app='myApp'>
+<body ng-controller="TextController">
+	<p ng-bind="someText.message">/p>
+	<button ng-click="execute">herro there</button>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+	<script type="text/javascript">
+		var myAppModule = angular.module('myApp', []);
+
+		myAppModule.controller('TextController', function ($scope) {
+			var someText = {
+				message: 'You have started your journey'
+			};
+
+			$scope.someText = someText;
+			$scope.execute = function () {
+				console.log('blahs');
+			};
+
+		});
+		
+		/*var messages = {
+			someText: 'You have started your journey'
+		};
+
+		function TextController ($scope) {
+			$scope.messages = messages;
+
+			$scope.blahs = function () {
+				console.log('hello');
+			};
+			console.log($scope);
+		}*/
+	</script>
+</body>
+</html>
